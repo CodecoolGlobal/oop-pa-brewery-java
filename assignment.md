@@ -1,0 +1,101 @@
+# Brewery Production Management System
+
+## Context
+You are building a production management system for a craft brewery. The brewery produces different types of beer and needs to track production, inventory, and brewer schedules.
+
+## Time Limit
+You have **X hours** to complete this assignment.
+
+## Your Tasks
+
+### Task 1: Complete the Beer Type System
+The starter code contains a basic `Beer` class. However, beers can be of different types (Lager or Ale) and each type has different characteristics:
+- **Lagers** require **cold** storage (below 5°C) and have longer fermentation times (21 days)
+- **Ales** can be stored at **room temperature** and have shorter fermentation times (14 days)
+
+Design and implement a proper type system for beers that allows the brewery to:
+- Store beer-specific information (name, alcohol content, production date)
+- Handle type-specific storage requirements
+- Calculate the days until a beer is ready for sale (production date + fermentation time)
+
+**Important:**
+- Not all beers are suitable for storage at the same temperature. Your design should prevent storing beers at incorrect temperatures.
+- Beers alcohol content is represented as a percentage and should be between 0 and 100.
+
+
+### Task 2: Implement the Brewer Hierarchy
+The starter code has a basic `Brewer` class. However, the brewery employs different types of brewers:
+- **Helper Brewers** work only on specific weekdays (e.g., Monday to Friday, or Monday and Wednesday)
+- **Master Brewers** work all 7 days of the week
+- All brewers have a name and years of experience
+
+Extend the existing `Brewer` class to handle these different types. The system must be able to:
+- Check if a specific brewer is available on a given day
+- Track brewing experience
+- Identify the role of each brewer
+- Master Brewer can brew a specific beer on a given day;
+  - Each day's production is independent - beer can be fully produced in a single day
+  - On each day, the master can produce as many batches as there are helpers available that day
+    - Example: Master brewer requested to produce beer on Monday and Thursday
+       - Monday: 3 helpers available → 3 batches can be produced on Monday
+       - Thursday: 2 helpers available → 2 batches can be produced on Thursday
+       - **Total production capacity for Monday and Thursday: 5 batches** (3 + 2)
+
+### Task 3: Complete the Brewery Class
+The `Brewery` class is partially implemented. You need to complete it with the following functionality:
+- Add new brewers to the brewery
+- Add newly produced beers to the stock
+- Retrieve beers from stock by name and quantity
+- Calculates the total production capacity across specific days
+- Finds beers that are past their prime (older than 180 days)
+
+**Important:**
+- You have to design appropriate data structure to manage the stock of beers
+- Only one Master Brewer can be assigned to the brewery at any time
+
+- The provided `Beer`, `Brewer` and `Brewery` classes is partially implemented; you need to take care of
+   - visibility,
+   - constructors,
+   - immutability,
+   - null safety, and other OOP principles.
+- Not all the required methods are mentioned with `//TODO` comments in the starter code!
+- Not all the classes/interfaces/records/enums you need are provided; you may need to create additional ones.
+
+### Task 6: Unit Testing
+Create comprehensive tests for your solution:
+
+1. **Simple Test:** Test the beer production calculation for a single day
+    - Verify that production capacity equals the number of available helpers
+
+2. **Complex Test with Mocking:** Test the quality control functionality
+    - Mock the current date/time to simulate different time periods
+    - Verify that beers older than 180 days are correctly identified
+    - Test edge cases (exactly 180 days, 179 days, 181 days)
+
+## Technical Requirements
+
+- Use Java 21 features where appropriate
+- Configure your own Maven dependencies (you'll need JUnit and Mockito)
+- Ensure proper encapsulation of all fields
+- Use immutable objects where it makes sense
+- Apply proper null safety practices
+- Use Java Stream API for collection operations
+- Write clean, maintainable code
+
+## Deliverables
+
+1. Completed Java source files with all functionality implemented
+2. Maven `pom.xml` with properly configured dependencies
+3. Test classes with both simple and complex (mocked) test cases
+4. All code should compile and run without errors
+
+## Evaluation Criteria
+
+Your solution will be evaluated based on:
+- Correct implementation of object-oriented design principles
+- Proper use of Java language features
+- Code quality and maintainability
+- Completeness of test coverage
+- Error handling and edge case management
+
+Good luck!

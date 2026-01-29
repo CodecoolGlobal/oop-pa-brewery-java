@@ -1,5 +1,6 @@
 package com.codecool.brewery;
 
+import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,24 +9,19 @@ import java.util.List;
  * Many methods are incomplete and need to be implemented.
  */
 public class Brewery {
-    private String name;
-    private List<Beer> stock;
-    private List<Brewer> brewers;
+    String name;
+    List<Brewer> brewers;
 
-    public Brewery(String name) {
-        this.name = name;
-        this.stock = new ArrayList<>();
-        this.brewers = new ArrayList<>();
+    public Brewery(String name) {}
+
+    void addBrewer(Brewer brewer) {
+        // TODO: Implement proper null checking and validation
+        // TODO: add brewer to brewers list
     }
 
-    public void addBrewer(Brewer brewer) {
+    void addBeerToStock(Beer beer) {
         // TODO: Implement proper null checking and validation
-        brewers.add(brewer);
-    }
-
-    public void addBeerToStock(Beer beer) {
-        // TODO: Implement proper null checking and validation
-        stock.add(beer);
+        // TODO: add beer to stock
     }
 
     /**
@@ -35,9 +31,8 @@ public class Brewery {
      * - What happens if there's not enough quantity?
      * - Should this modify the stock?
      */
-    public List<Beer> retrieveBeerFromStock(String beerName, int quantity) {
+    void retrieveBeerFromStock(String beerName, int quantity) {
         // TODO: Implement
-        return null;
     }
 
     /**
@@ -48,7 +43,7 @@ public class Brewery {
      * - Count available helpers on each specified day
      * - Return the sum of helper counts across all days
      */
-    public int calculateProductionCapacity(List<String> days) {
+    public int calculateProductionCapacity(List<DayOfWeek> days) {
         // TODO: Implement
         return 0;
     }
@@ -59,33 +54,8 @@ public class Brewery {
      * - Filter beers by age
      * - Return collection of beer names
      */
-    public List<String> findExpiredBeers() {
+    public List<String> findMaturedBeers() {
         // TODO: Implement
         return null;
-    }
-
-    /**
-     * Finds the optimal days for production within a given range.
-     * TODO: Implement this algorithm
-     * - Consider helper availability
-     * - Use Stream API for calculations
-     * - Return days with maximum production capacity
-     */
-    public List<String> findOptimalProductionDays(String startDay, String endDay) {
-        // TODO: Implement
-        return null;
-    }
-
-    // Getters
-    public String getName() {
-        return name;
-    }
-
-    public List<Beer> getStock() {
-        return new ArrayList<>(stock); // Defensive copy
-    }
-
-    public List<Brewer> getBrewers() {
-        return new ArrayList<>(brewers); // Defensive copy
     }
 }

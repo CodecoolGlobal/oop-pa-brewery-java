@@ -7,31 +7,21 @@ import java.time.LocalDate;
  * This is a basic implementation - you need to extend this to support different beer types.
  */
 public class Beer {
-    private String name;
-    private double alcoholContent;
-    private LocalDate productionDate;
+    String name;
+    double alcoholContent;
+    LocalDate productionDate;
 
-    public Beer(String name, double alcoholContent, LocalDate productionDate) {
-        this.name = name;
-        this.alcoholContent = alcoholContent;
-        this.productionDate = productionDate;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getAlcoholContent() {
-        return alcoholContent;
-    }
-
-    public LocalDate getProductionDate() {
-        return productionDate;
-    }
+    public Beer(String name, double alcoholContent, LocalDate productionDate) {}
 
     // TODO: Add method to calculate days until beer is ready for sale
     // TODO: Consider how to handle different fermentation times for different beer types
     public int getDaysUntilReady() {
         return 0;
+    }
+
+    // TODO: Add method to get storage temperature requirement
+    // TODO: Consider canBeStoredAt method may accept parameters for temperature checks
+    public boolean canBeStoredAt() {
+        return false;
     }
 }

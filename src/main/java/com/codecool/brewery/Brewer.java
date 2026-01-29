@@ -5,22 +5,15 @@ package com.codecool.brewery;
  * You need to extend this class to support different types of brewers.
  */
 public class Brewer {
-    private String name;
-    private int yearsOfExperience;
+    String name;
+    int yearsOfExperience;
 
-    public Brewer(String name, int yearsOfExperience) {
-        this.name = name;
-        this.yearsOfExperience = yearsOfExperience;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getYearsOfExperience() {
-        return yearsOfExperience;
-    }
+    public Brewer(String name, int yearsOfExperience) {}
 
     // TODO: Add method to check if brewer is available on a specific day
     // TODO: Consider how different types of brewers have different schedules
+    // TODO: Consider isAvailableOn may accept parameters for day checks
+    boolean isAvailableOn(){
+        return false;
+    };
 }
