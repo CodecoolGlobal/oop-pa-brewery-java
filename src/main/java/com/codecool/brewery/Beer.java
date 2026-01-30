@@ -24,4 +24,9 @@ public class Beer {
     public boolean canBeStoredAt() {
         return false;
     }
+
+    // TODO: Add method to get fermentation days
+    public int getFermentationDays() {
+        return 0;
+    }
 }

@@ -81,4 +81,3 @@ There are some test already implemented in `BreweryTest`, but you need to implem
 2. Maven `pom.xml` with properly configured dependencies
 3. Test classes
 4. All code should compile and run without errors
-
