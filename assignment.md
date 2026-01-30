@@ -22,7 +22,6 @@ Design and implement a proper type system for beers that allows the brewery to:
 - Not all beers are suitable for storage at the same temperature. Your design should prevent storing beers at incorrect temperatures.
 - Beers alcohol content is represented as a percentage and should be between 0 and 100.
 
-
 ### Task 2: Implement the Brewer Hierarchy
 The starter code has a basic `Brewer` class. However, the brewery employs different types of brewers:
 - **Helper Brewers** work only on specific weekdays (e.g., Monday to Friday, or Monday and Wednesday)
@@ -33,9 +32,9 @@ Extend the existing `Brewer` class to handle these different types. The system m
 - Check if a specific brewer is available on a given day
 - Track brewing experience
 - Identify the role of each brewer
-- Master Brewer can brew a specific beer on a given day;
+- Master Brewer _can brew_ a specific beer on a _given day_;
   - Each day's production is independent - beer can be fully produced in a single day
-  - On each day, the master can produce as many batches as there are helpers available that day
+  - On each day, the master can produce as many batches (liters) as there are helpers available that day
     - Example: Master brewer requested to produce beer on Monday and Thursday
        - Monday: 3 helpers available → 3 batches can be produced on Monday
        - Thursday: 2 helpers available → 2 batches can be produced on Thursday
@@ -62,20 +61,14 @@ The `Brewery` class is partially implemented. You need to complete it with the f
 - Not all the classes/interfaces/records/enums you need are provided; you may need to create additional ones.
 
 ### Task 6: Unit Testing
-Create comprehensive tests for your solution:
-
-1. **Simple Test:** Test the beer production calculation for a single day
-    - Verify that production capacity equals the number of available helpers
-
-2. **Complex Test with Mocking:** Test the quality control functionality
-    - Mock the current date/time to simulate different time periods
-    - Verify that beers older than 180 days are correctly identified
-    - Test edge cases (exactly 180 days, 179 days, 181 days)
+Create comprehensive tests for your solution!
+There are some test already implemented in `BreweryTest`, but you need to implement the following additional tests:
+- LIST OF TESTS TO IMPLEMENT:
 
 ## Technical Requirements
 
 - Use Java 21 features where appropriate
-- Configure your own Maven dependencies (you'll need JUnit and Mockito)
+- Configure your own Maven dependencies
 - Ensure proper encapsulation of all fields
 - Use immutable objects where it makes sense
 - Apply proper null safety practices
@@ -86,16 +79,6 @@ Create comprehensive tests for your solution:
 
 1. Completed Java source files with all functionality implemented
 2. Maven `pom.xml` with properly configured dependencies
-3. Test classes with both simple and complex (mocked) test cases
+3. Test classes
 4. All code should compile and run without errors
 
-## Evaluation Criteria
-
-Your solution will be evaluated based on:
-- Correct implementation of object-oriented design principles
-- Proper use of Java language features
-- Code quality and maintainability
-- Completeness of test coverage
-- Error handling and edge case management
-
-Good luck!
