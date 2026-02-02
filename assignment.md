@@ -62,8 +62,15 @@ The `Brewery` class is partially implemented. You need to complete it with the f
 
 ### Task 6: Unit Testing
 Create comprehensive tests for your solution!
-There are some test already implemented in `BreweryTest`, but you need to implement the following additional tests:
-- LIST OF TESTS TO IMPLEMENT:
+There are some test already implemented in `BreweryTest`, but you need to extend or implement the following additional tests:
+- `void setUp()`
+- `void testProductionCapacityOnMultipleDays()`
+- `void testProductionCapacityWithInvalidDay()`
+- `testFindExpiredBeers()`
+- `void testBeerFermentationDays()`
+- `void testBeerStorageTemperature()`
+- `testHelperBrewerAvailability()`
+- `void testFindOptimalProductionDays()`
 
 ## Technical Requirements
 
@@ -75,8 +82,7 @@ There are some test already implemented in `BreweryTest`, but you need to implem
 - Use Java Stream API for collection operations
 - Write clean, maintainable code
 
-## Deliverables
-
+## Deliverables (GitHub repository)
 1. Completed Java source files with all functionality implemented
 2. Maven `pom.xml` with properly configured dependencies
 3. Test classes
