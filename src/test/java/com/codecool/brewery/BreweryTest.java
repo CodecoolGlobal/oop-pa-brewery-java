@@ -1,13 +1,9 @@
 package com.codecool.brewery;
-
-import com.codecool.brewery.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.util.EnumSet;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -30,10 +26,7 @@ class BreweryTest {
         // TODO: helper brewer: "Helper Bob", 2 years experience, available Mon, Thu, Fri
         // TODO: helper brewer: "Helper Charlie", 4 years experience, available Tue, Wed, Thu
 
-        brewery.addBrewer(masterBrewer);
-        brewery.addBrewer(helper1);
-        brewery.addBrewer(helper2);
-        brewery.addBrewer(helper3);
+        // TODO: add master and helpers to brewery
     }
 
     @Test
@@ -84,13 +77,8 @@ class BreweryTest {
     @DisplayName("Beer type has correct fermentation days")
     void testBeerFermentationDays() {
         // TODO: implement test for fermentation days
-        // TODO: create Lager: "Test Lager", 5.0%, today
-        // TODO: create Ale: "Test Ale", 5.5%, today
-        Beer lager = null;
-        Beer ale = null;
-
-        assertEquals(21, lager.getFermentationDays());
-        assertEquals(14, ale.getFermentationDays());
+        // TODO: create Lager: "Test Lager", 5.0%, today; fermentation time shall be 21 days
+        // TODO: create Ale: "Test Ale", 5.5%, today; fermentation time shall be 14 days
     }
 
     @Test

@@ -11,18 +11,18 @@ import java.util.stream.Collectors;
  * Represents a brewery that manages beer production and staff.
  * Many methods are incomplete and need to be implemented.
  */
-public class Brewery {
+class Brewery {
     String name;
     List<Brewer> brewers;
 
-    public Brewery(String name) {}
+    Brewery(String name) {}
 
-    void addBrewer(Brewer brewer) {
+    void addBrewer() {
         // TODO: Implement proper null checking and validation
         // TODO: add brewer to brewers list
     }
 
-    void addBeerToStock(Beer beer) {
+    void addBeerToStock() {
         // TODO: Implement proper null checking and validation
         // TODO: add beer to stock
     }
@@ -34,7 +34,7 @@ public class Brewery {
      * - What happens if there's not enough quantity?
      * - Should this modify the stock?
      */
-    void retrieveBeerFromStock(String beerName, int quantity) {
+    void retrieveBeerFromStock() {
         // TODO: Implement
     }
 

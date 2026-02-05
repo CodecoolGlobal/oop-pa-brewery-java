@@ -3,12 +3,15 @@
 ## Context
 You are building a production management system for a craft brewery. The brewery produces different types of beer and needs to track production, inventory, and brewer schedules.
 
-## Time Limit
-You have **X hours** to complete this assignment.
+## Exam Rules & Circumstances
+- You have 2 hours to complete this assignment.
+- While developing your solution, you must follow proper git commit practices, ensuring that your commits are atomic and descriptive. (Please note: submitting the final solution in a single commit is not acceptable.)
+- This is an individual task. Do not seek assistance from AI tools or any external sources.
+- You must submit source code that you fully understand and are able to explain in detail.
 
 ## Your Tasks
 
-### Task 1: Complete the Beer Type System
+### Task 1: Produce Beer!
 The starter code contains a basic `Beer` class. However, beers can be of different types (Lager or Ale) and each type has different characteristics:
 - **Lagers** require **cold** storage (below 5°C) and have longer fermentation times (21 days)
 - **Ales** can be stored at **room temperature** and have shorter fermentation times (14 days)
@@ -22,7 +25,7 @@ Design and implement a proper type system for beers that allows the brewery to:
 - Not all beers are suitable for storage at the same temperature. Your design should prevent storing beers at incorrect temperatures.
 - Beers alcohol content is represented as a percentage and should be between 0 and 100.
 
-### Task 2: Implement the Brewer Hierarchy
+### Task 2: Hire Brewers!
 The starter code has a basic `Brewer` class. However, the brewery employs different types of brewers:
 - **Helper Brewers** work only on specific weekdays (e.g., Monday to Friday, or Monday and Wednesday)
 - **Master Brewers** work all 7 days of the week
@@ -59,6 +62,7 @@ The `Brewery` class is partially implemented. You need to complete it with the f
    - null safety, and other OOP principles.
 - Not all the required methods are mentioned with `//TODO` comments in the starter code!
 - Not all the classes/interfaces/records/enums you need are provided; you may need to create additional ones.
+- Partially implemented methods may not have complete signatures; you need to design the method signatures yourself.
 
 ### Task 6: Unit Testing
 Create comprehensive tests for your solution!
