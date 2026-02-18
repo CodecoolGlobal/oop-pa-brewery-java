@@ -4,7 +4,7 @@
 You are building a production management system for a craft brewery. The brewery produces different types of beer and needs to track production, inventory, and brewer schedules.
 
 ## Exam Rules & Circumstances
-- You have 2 hours to complete this assignment.
+- You have **3 hours** to complete this assignment.
 - While developing your solution, you must follow proper git commit practices, ensuring that your commits are atomic and descriptive. (Please note: submitting the final solution in a single commit is not acceptable.)
 - This is an individual task. Do not seek assistance from AI tools or any external sources.
 - You must submit source code that you fully understand and are able to explain in detail.
