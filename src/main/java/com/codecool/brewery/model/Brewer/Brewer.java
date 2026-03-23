@@ -1,8 +1,9 @@
-package com.codecool.brewery.model;
+package com.codecool.brewery.model.Brewer;
 import java.time.DayOfWeek;
 public abstract class Brewer {
     private final String name;
     private final int yearsOfExperience;
+
     protected Brewer(String name, int yearsOfExperience) {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Brewer name must not be null or blank.");
@@ -13,16 +14,18 @@ public abstract class Brewer {
         this.name = name;
         this.yearsOfExperience = yearsOfExperience;
     }
+
     public String getName() {
         return name;
     }
     public int getYearsOfExperience() {
         return yearsOfExperience;
     }
+
     public abstract boolean isAvailableOn(DayOfWeek day);
-    public abstract String getRole();
+
     @Override
     public String toString() {
-        return "%s[%s, %d yrs]".formatted(getRole(), name, yearsOfExperience);
+        return "%s[%d yrs]".formatted(name, yearsOfExperience);
     }
 }

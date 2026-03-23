@@ -1,4 +1,5 @@
-package com.codecool.brewery.model;
+package com.codecool.brewery.model.Brewer;
+
 import java.time.DayOfWeek;
 import java.util.Collections;
 import java.util.EnumSet;
@@ -20,10 +21,7 @@ public final class HelperBrewer extends Brewer {
         }
         return workDays.contains(day);
     }
-    @Override
-    public String getRole() {
-        return "HelperBrewer";
-    }
+
     public Set<DayOfWeek> getWorkDays() {
         return workDays;
     }

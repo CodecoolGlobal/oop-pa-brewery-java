@@ -1,8 +1,7 @@
 package com.codecool.brewery;
-import com.codecool.brewery.model.Ale;
-import com.codecool.brewery.model.HelperBrewer;
-import com.codecool.brewery.model.Lager;
-import com.codecool.brewery.model.MasterBrewer;
+import com.codecool.brewery.model.Brewer.HelperBrewer;
+import com.codecool.brewery.model.Beer.*;
+import com.codecool.brewery.model.Brewer.MasterBrewer;
 import com.codecool.brewery.service.Brewery;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -1,10 +1,11 @@
-package com.codecool.brewery.model;
+package com.codecool.brewery.model.Beer;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 public abstract class Beer {
     private final String name;
     private final double alcoholContent;
     private final LocalDate productionDate;
+
     protected Beer(String name, double alcoholContent, LocalDate productionDate) {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Beer name must not be null or blank.");
@@ -28,8 +29,10 @@ public abstract class Beer {
     public LocalDate getProductionDate() {
         return productionDate;
     }
+
     public abstract int getFermentationDays();
     public abstract boolean canBeStoredAt(double temperatureCelsius);
+
     public long getDaysUntilReady() {
         LocalDate readyDate = productionDate.plusDays(getFermentationDays());
         return ChronoUnit.DAYS.between(LocalDate.now(), readyDate);
